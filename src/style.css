@@ -1,0 +1,170 @@
+body{
+  background-color: #0f0f0f;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+header{
+  height: 620px
+}
+
+.section-Accent{
+  border-bottom: 2px solid #387deb;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 2.75rem;
+  width: 80px;
+}
+
+
+
+
+
+/* make height 860 px for desktop mode */
+/*  */
+/* rgb(59, 59, 59) */
+/* contact button */
+
+.btn2 {
+  position: relative;
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid #fefefe;
+  text-transform: uppercase;
+  color: #fefefe;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.btn2::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - -2px);
+  background-color: #0f0f0f;
+  transition: 0.3s ease-out;
+  transform: scaleY(1);
+}
+
+.btn2::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - 50px);
+  background-color: #0f0f0f;
+  transition: 0.3s ease-out;
+  transform: scaleY(1);
+}
+
+.btn2:hover::before {
+  transform: translateY(-25px);
+  height: 0;
+}
+
+.btn2:hover::after {
+  transform: scaleX(0);
+  transition-delay: 0.15s;
+}
+
+.btn2:hover {
+  border: 2px solid #fefefe;
+}
+
+.btn2 span {
+  position: relative;
+  z-index: 3;
+}
+
+.btn1 {
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+}
+
+.project-content{
+  opacity: 0%;
+  transition: all 300ms;
+}
+.project-card:hover > .project-content{
+  opacity: 100%;
+}
+.project-img{
+  transition: all 300ms;
+}
+.project-card:hover > .project-img {
+  filter: brightness(35%);
+}
+
+
+
+/* Input container */
+.input-container {
+  position: relative;
+  margin: 20px;
+}
+
+/* Input field */
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background-color: transparent;
+  color: #a5a8ad;
+}
+
+.input-field:focus{
+  color: white;
+}
+
+/* Input label */
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgba(204, 204, 204, 0);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Input highlight */
+.input-highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+/* Input field:focus styles */
+.input-field:focus + .input-label {
+  top: -20px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+.input-field:focus + .input-label + .input-highlight {
+  width: 100%;
+}
